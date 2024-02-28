@@ -1,5 +1,8 @@
 import dotenv
+import jinja2
 import openai
+import sys
+
 
 API_KEY_ENV_FILE=".api_key.env"
 MODEL="gpt-3.5-turbo"
@@ -18,19 +21,34 @@ SYSTEM_PROMPT="""
 
   You will be provided a term or list of terms, and you will provide that simple explanation in
   return.
+
+  Use a new HTML paragraph for each concept. Empasize term in question using HTML bold.
 """
 SYSTEM_PROMPT = SYSTEM_PROMPT.strip(' \n').replace('\n', '').replace('  ', ' ')
 
-dotenv.load_dotenv(API_KEY_ENV_FILE)
+with open('terms.txt', 'r') as f:
+    terms = f.readlines()
 
+
+dotenv.load_dotenv(API_KEY_ENV_FILE)
 client = openai.OpenAI()
 
-completion = client.chat.completions.create(
-    model=MODEL,
-    messages=[
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": "'gradient descent', 'stochastic gradient descent (SGD)'"},
-    ]
-)
 
-print(completion.choices[0].message)
+slides = []
+for term in terms:
+    completion = client.chat.completions.create(
+        model=MODEL,
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": term},
+        ]
+    )
+    content = completion.choices[0].message.content
+    slides.append(content)
+    sys.stderr.write(f"Term: {term}\nContent: {content}\n\n")
+
+
+env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
+template = env.get_template('index.html.jinja')
+
+sys.stdout.write(template.render(slides=slides))
