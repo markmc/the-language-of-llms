@@ -1,0 +1,31 @@
+machine learning
+supervised learning, unsupervised learning, reinforcement learning
+training data, validation data, test data
+language model, natural language processing (NLP)
+model, prediction
+training, validation, inference
+pre-trained model, fine-tuning
+linear model
+parameters, weights, biases
+architecture, hyperparameters
+neural network, deep learning
+independent variable, dependent variable
+labels, targets
+fitting, epochs
+forward pass, loss function, backward pass
+gradient descrent, stochastic gradient descent (SGD)
+tensor
+encoding
+alignment
+overfitting, performance
+classifier
+sentiment analysis
+token, tokenization
+transformers, GPT
+attention mechanism
+embeddings
+prompts, prompt engineering, system prompt
+zero-shot, one-shot, few-shot
+Jupyter, Colab, Kaggle
+PyTorch, TensorFlow
+GPU
