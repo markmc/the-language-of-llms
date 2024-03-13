@@ -1,31 +1,51 @@
 machine learning
-supervised learning, unsupervised learning, reinforcement learning
-training data, validation data, test data
-language model, natural language processing (NLP)
-model, prediction
-training, validation, inference
-pre-trained model, fine-tuning
+model
+training
+inference
+model architecture
+parameters
+
 linear model
-parameters, weights, biases
-architecture, hyperparameters
-neural network, deep learning
+coefficient, intercept
+weights, biases
+regression
+
+neural network, layers
+hidden layer
+deep learning
+
+supervised learning
+training data
+forward pass
 independent variable, dependent variable
-labels, targets
-fitting, epochs
-forward pass, loss function, backward pass
-gradient descrent, stochastic gradient descent (SGD)
-tensor
-encoding
-alignment
-overfitting, performance
-classifier
-sentiment analysis
-token, tokenization
-transformers, GPT
-attention mechanism
-embeddings
+label
+loss function
+backward pass
+stochastic gradient descent
+fit
+epoch
+
+validation data
+overfitting
+
+pre-trained model
+fine-tuning, alignment
+reinforcement learning
+Low-Rank Adaptation (LoRA)
+
+tensor, matrix, array, ndarray
+PyTorch, TensorFlow, Scikit-learn
+accelerator, GPU, GPU kernel
+
+language model, natural language processing (NLP)
+large language model
+token, subword encoding
 prompts, prompt engineering, system prompt
 zero-shot, one-shot, few-shot
-Jupyter, Colab, Kaggle
-PyTorch, TensorFlow
-GPU
+transformers, GPT
+attention mechanism
+one-hot encoding
+retrieval augmented generation (RAG)
+embeddings, vector database
+
+rabbit hole
