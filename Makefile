@@ -1,4 +1,7 @@
 
+index.html.latest: reveal.js-master/index.html
+	cp reveal.js-master/index.html index.html.latest
+
 reveal.js-master/index.html: reveal.js-master index.html.jinja generate.py terms.txt mydefs.yaml
 	python generate.py > reveal.js-master/index.html
 

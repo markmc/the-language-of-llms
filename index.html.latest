@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h1>The Language of Large Language Models</h1>Mark McLoughlin, March 2024</br>https://github.com/markmc/the-language-of-llms</section>
+        
+        <section>
+          
+          <section><small>You are a friendly Computer Science university lecturer who enjoys taking difficult concepts and making them as simple as possible. You are addressing a 1st year class who are already familiar with many Computer Science concepts. Your goal is to introduce the unfamiliar terminology and concepts that the students will encounter when studying Machine Learning. Your presentation is titled &#x27;The Language of Large Language Models&#x27;, and you are going to explain each individual concept very simply, in less than 20 seconds each. You will be provided a term or list of terms, and you will provide that simple explanation in return. Use a new HTML &lt;p&gt; tag for each concept. Empasize term in question using HTML &lt;b&gt; tags.</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Machine learning</b> refers to algorithms and processes that allow machines to learn from data without being explicitly programmed.
+</p></section>
+          
+          <section><p><b>Machine learning</b> is a way for computers to learn and make decisions without being explicitly programmed. It's like teaching a computer to learn from data and improve over time.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Machine Learning</b> is like teaching a computer to learn from past experiences, just as you learn from your mistakes or successes, without being directly programmed to do specific tasks. Think of it as giving the computer the ability to get better at a game the more it plays.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Model:</b> A simplified representation of a real-world process or system that can be used to make predictions or decisions.
+</p></section>
+          
+          <section><p><b>Model</b>: A simplified representation of a real-world process or system that helps us understand, analyze, or make predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>A <b>model</b> in machine learning is like a smart robot that learns from examples. You give it a bunch of data (like pictures or sentences), and it learns patterns or rules to make predictions or decisions based on new, unseen examples.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Training</b> is a process of learning from examples whereby a model is iteratively adjusted as it learns patterns from data and can make better predictions.</p>
+</p></section>
+          
+          <section><p><b>Training:</b> Teaching a machine learning model by providing it with examples, allowing it to learn patterns and make predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>Think of <b>training</b> like teaching your computer to learn from examples, just like you learn from textbooks, so later it can make smart decisions or predictions all by itself!</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Inference</b>: Using a trained model to make a prediction or decision based on input data.
+</p></section>
+          
+          <section><p><b>Inference</b> is the process of using a trained machine learning model to make predictions or decisions based on new, unseen data.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In <b>inference</b>, we take a trained machine learning model and use it to make predictions on new, unseen data. It's like after learning to solve math problems, you're now solving new ones for a test.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Model architecture</b> refers to the structure of a machine learning model - the specific chain of computations applied to input to produce an output prediction.
+</p></section>
+          
+          <section><p><b>Model architecture</b> refers to the overall design and structure of a machine learning model, including how the different components are connected and organized to perform a specific task.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>Think of <b>model architecture</b> as the blueprint of a building, but for machine learning models. It's the overall design that outlines how the model processes information, including the layers and how they're connected to make predictions or understand data.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Parameters</b> are the tunable parts of a model's computations - an algorithm is used to adjust these tunables during training to improve the model's predictions.
+</p></section>
+          
+          <section><p><b>Parameters</b> are the internal settings that a machine learning model learns from the training data in order to make predictions or decisions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>Think of <b>parameters</b> as dials on a machine. In machine learning, these are the bits that the model adjusts to get better at its job, like a chef adjusting a recipe to make the perfect dish.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Linear model</b>: A simple mathematical model of a straight line relationship between an input and an output. Recall <tt>y = mx + c</tt> from analytic geometry.
+</p></section>
+          
+          <section><p><b>Linear model</b>: A simple way to represent the relationship between input variables and output variables by assuming a linear relationship between them. It's like drawing a straight line through data points to make predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>A <b>linear model</b> is like drawing a straight line through points on a graph. It predicts new points (answers) by finding the best straight path through existing ones (data). Simple and useful for situations where relationships are, well, linear!</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Coefficient:</b> a number that represents the relationship between variables - in <tt>y = mx + c</tt>, the slope <tt>m</tt> is the coefficient applied to the input.
+</p><p><b>Intercept:</b> the starting point, independent of the input - in <tt>y = mx + c</tt>, it is <tt>c</tt> where the line intersects the y-axis.
+</p></section>
+          
+          <section><p><b>Coefficient:</b> It's a number that represents the relationship between variables in a statistical model. It shows how a change in one variable affects another.</p>
+
+<p><b>Intercept:</b> It's the value where a line or curve intersects the y-axis on a graph. In a linear equation, it's the value of y when x is 0.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Coefficient</b> in machine learning is like the volume knob on your speaker. If you turn it up, the contribution or importance of a feature (like bass or treble in music) to the model's prediction increases. Turn it down, and the feature's impact decreases.</p>
+
+<p><b>Intercept</b> is like the base level of volume on your speaker before you even start adjusting any knobs. It's the starting point from which all the adjustments (coefficients) are made to predict the final outcome.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Weights</b> are another name for of model parameters that are applied to the input - i.e. coefficients.
+</p><p><b>Biases</b> are additional parameters in a model that allow for shifts in the predictions to better fit the data - e.g. the y-intercept in a linear model.
+</p></section>
+          
+          <section><p><b>Weights</b> are values that a machine learning model uses to make predictions. Think of them as the importance or contribution that each input features have in determining the output.</p>
+<p><b>Biases</b> are additional values in a machine learning model that allow for shifts in predictions. They help make the model more flexible and better at capturing complex patterns in the data.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Weights</b> are like adjustable knobs in Machine Learning models. They determine the importance of input features. Think of them as the influence each friend has on your decision-making. We adjust these knobs during training to get better predictions.</p>
+
+<p><b>Biases</b> are like your initial hunches before you even see the data. It's the starting point for making a decision in your model. Imagine deciding you're slightly hungry before even looking at a menu; that's your bias nudging your decision.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Regression:</b> expressing the relationship between variables as a continuous function in order to make predictions.
+</p></section>
+          
+          <section><p><b>Regression</b> is a way to predict a continuous value based on the input data. It helps us understand the relationship between the input variables and the output. It's like drawing a line through data points to make future predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In <b>regression</b>, imagine you're trying to predict someone's height based on their age. Your goal is to find a line (or curve) that best fits your data points on a graph, so you can say, "Given age X, we expect height Y."</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Neural network:</b> a model architecture made up of interconnected nodes that process information, inspired by the brain's structure of neurons and synapses.
+</p><p><b>Layers:</b> In a neural network, nodes are organized into layers. Each layer processes and transforms the input data before passing it to the next layer.
+</p></section>
+          
+          <section><p><b>Neural network:</b> A computer system that learns patterns from data, inspired by the human brain.</p>
+<p><b>Layers:</b> Different levels in a neural network where data is processed and features are learned.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>A <b>neural network</b> is like a virtual brain made up of interconnected artificial neurons. Think of it as a complex web of nodes that can take in data, process it in various ways, and come up with a decision or prediction, mimicking how our own brain works but in a computer.</p>
+
+<p><b>Layers</b> in a neural network are sort of like the levels in a video game. Each level (or layer) has a different role in processing the data. You start with the input layer that receives the data, go through one or more hidden layers where the heavy lifting and learning happen, and end at the output layer, which presents the result. Just like in games, advancing through levels helps you get closer to your goal.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Hidden layer</b>: A middle layer in a neural network where data is processed using a series of mathematical operations. Takes input from an input layer or another hidden layer, and passes its output to another hidden layer or an output layer.
+</p></section>
+          
+          <section><p><b>Hidden layer:</b> In a neural network, a hidden layer is where the model learns patterns and relationships from the input data. These layers are not directly connected to the input or output, hence the term "hidden".</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In a neural network, the <b>hidden layer</b> is like a secret middle team that works behind the scenes. It takes input from the outer world, does some mystery math on it, and passes the results forward, but it's not visible from the outside.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Deep learning</b> uses neural networks with many layers to learn and make decisions from large amounts of data. The more layers a network has, the more complex patterns it can learn.
+</p></section>
+          
+          <section><p><b>Deep learning:</b> A type of machine learning that uses neural networks with many layers to learn complex patterns in data.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Deep learning</b> is a computer technique that teaches machines to think and learn like humans by using a complex network of algorithms that mimic the brain’s structure and function. It's like teaching a robot to understand and learn from the world by showing it lots and lots of examples.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Supervised learning</b> is when we train a model with input data and the correct output data, so it can learn to make predictions or decisions.
+</p></section>
+          
+          <section><p><b>Supervised learning:</b> Teaching a computer to learn a mapping from input data to output labels by providing labeled examples for it to learn from. It's like giving a child the answers to a set of questions so they can learn to solve similar questions on their own.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In <b>supervised learning</b>, think of it like teaching a child with flashcards. You show a computer examples (the flashcards), tell it what each example is (the labels), and it learns to recognize new examples on its own.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Training data</b> is a dataset we use for training a model, in contrast to datasets we later use to test a model.
+</p></section>
+          
+          <section><p><b>Training data:</b> Examples or samples of data used to teach a machine learning model how to make predictions or decisions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>Think of <b>training data</b> as the textbook you use to study for an exam. It's the information that a machine learning model reads and learns from, so it can understand how to make decisions or predictions in the future.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Forward pass</b> is when input data is passed through a neural network from input to output to make a prediction.
+</p></section>
+          
+          <section><p><b>Forward pass:</b> When data is inputted into a machine learning model and computations are made through the different layers to make a prediction. It's like passing information forward through the model.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In machine learning, a <b>forward pass</b> means doing all the calculations step by step from the input layer, through the hidden layers, to the output layer. Think of it like dominoes falling from start to finish, where the final domino reveals the network's answer based on the given inputs.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Independent variable:</b> an input variable that affects an output - in <tt>y = mx + c</tt> the independent variable is <tt>x</tt>
+</p><p><b>Dependent variable:</b> a variable that changes in response to an independent variable - in <tt>y = mx + c</tt> the dependent variable is <tt>y</tt>.
+</p></section>
+          
+          <section><p><b>Independent variable:</b> The variable that is changed or controlled in a scientific experiment. It is the cause that you manipulate.</p>
+<p><b>Dependent variable:</b> The variable that is measured in an experiment. It is the effect that is being studied and measured.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Independent variable</b> is like the input you control or change in an experiment to see what effect it has. Imagine adjusting the volume on your music player to see how it affects your mood.</p>
+
+<p><b>Dependent variable</b> is like the outcome you're interested in measuring or observing. Using the music player example, your mood would be the dependent variable that changes based on the volume, the independent variable.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Label</b>: A piece of information that identifies or categorizes data. In machine learning, labels are used to train models to make predictions or classifications based on input data.
+</p></section>
+          
+          <section><p><b>Label:</b> A label in machine learning is the output or the answer that we are trying to predict. It is the ground truth or the correct answer that the model aims to learn from the input data.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In <b>Machine Learning</b>, a <b>label</b> is like a sticky note that tells you what something is. For example, in a bunch of photos, a label tells us whether a photo is of a cat or a dog. It's how we teach computers to recognize and differentiate things.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Loss function</b>: A measure of how well a model is performing, by calculating the difference between predicted values and actual values.
+</p></section>
+          
+          <section><p><b>Loss function:</b> A way to measure how well our model is performing. It calculates the difference between the predicted output and the actual label, helping the model to adjust its parameters during training.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>A <b>loss function</b> is like a scorekeeper in a game. It tells us how well the machine's guesses match the real answers. The lower the score, the better the machine is doing.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Backward pass:</b> is when a model calculates how to update its parameters during training in order to reduce the loss function, thereby improving its predictions.
+</p></section>
+          
+          <section><p><b>Backward pass</b> is the process in machine learning where the model adjusts its parameters by calculating the gradients of the loss function with respect to each parameter, in order to update them and improve the model's performance.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In machine learning, a <b>backward pass</b> refers to the process of adjusting the model's weights in reverse order, starting from the output layer towards the input layer. This is done after computing the loss to improve the model's predictions. Think of it like retracing your steps to correct mistakes after completing a task.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Stochastic Gradient Descent:</b> updating each model parameter semi-randomly (stochastically) based on an indication (gradient) of the update required to minimize the loss function.
+</p></section>
+          
+          <section><p><b>Stochastic Gradient Descent:</b> A way for computers to learn and optimize models by gradually adjusting parameters based on small random batches of data, instead of the entire dataset at once.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Stochastic Gradient Descent</b> is like finding the best path downhill. Imagine you're in a foggy valley and you want to get to the lowest point. Since it's foggy, you can't see far ahead, so you take small steps in the direction that seems to slope down the most. Over time, step by step, these small, random moves help you find your way to the bottom.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Fit</b>: training a model on a dataset so its predictions closely match the data - "fitting a model to the data".
+</p></section>
+          
+          <section><p><b>Fit:</b> The process of training a machine learning model on a dataset to learn patterns and make predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>When we <b>fit</b> a model in machine learning, it's like teaching it how to make predictions by showing it examples. It's the process of learning from data.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Epoch</b> is one complete pass through the entire dataset during training.
+</p></section>
+          
+          <section><p><b>Epoch:</b> One complete pass through the entire dataset during training of a machine learning model.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>An <b>epoch</b> in machine learning is one complete pass through the entire training dataset during the learning process. Imagine reading through a textbook from start to finish once - that's like completing one epoch.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Validation data:</b> A separate set of data used to assess how well a model generalizes to new, unseen data.
+</p></section>
+          
+          <section><p><b>Validation data</b> is a set of data separate from the training data that is used to evaluate the performance of a machine learning model. It helps us determine how well the model generalizes to new, unseen data.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Validation data</b> is a middle-ground set of information that you use to check how well your machine learning model is learning during its training phase. Think of it as a practice exam before the final test, which is the real-world data it hasn't seen before.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Overfitting</b> is when a model learns the details and noise in the training data so well that it performs poorly on new data. It's like memorizing answers rather than learning general concepts.
+</p></section>
+          
+          <section><p><b>Overfitting</b> happens when a machine learning model learns the details and noise in the training data to the extent that it negatively impacts the performance on new data it hasn't seen before. It's like studying only the exact questions from a textbook without understanding the concepts.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Overfitting</b> is when your model is a bit too good at memorizing your specific training data, including all its little quirks and noise, so much so that it performs poorly on new, unseen data because it's too focused on the specifics of the training set.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Pre-trained model</b>: a model that has already been trained on a large amount of data, allowing it to make predictions without needing to start from scratch.
+</p></section>
+          
+          <section><p><b>Pre-trained model</b>: A model that has already been trained on a large dataset to learn patterns and relationships, which can then be fine-tuned for a specific task without starting from scratch.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>A <b>pre-trained model</b> is like a well-educated student before their first job; it's a machine learning model that has already learned a lot from a huge dataset, so you don't have to teach it everything from scratch.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Fine-tuning:</b> further training of a pre-trained model so it can perform a specific task really well.
+</p><p><b>Alignment:</b> Ensuring that a model's understanding aligns with human values and intentions, making it safe and beneficial for us.
+</p></section>
+          
+          <section><p><b>Fine-tuning:</b> It's like giving a finishing touch to a pre-trained language model to adapt it to a specific task or dataset.</p>
+<p><b>Alignment:</b> Ensuring that the objectives of large language models are in line with the desired outcomes while training them.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Fine-tuning</b> is like giving your car a small adjustment to make it run better. In machine learning, after you've taught your model the basic stuff with a lot of data, fine-tuning adjusts it with more specific examples so it performs better at the task you want.</p>
+
+<p><b>Alignment</b> in machine learning is like teaching a robot to understand and share your goals. It's about making sure the AI's actions and decisions line up with what humans actually want it to do, reducing the risk of it going off track.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Reinforcement learning:</b> teaching machines to learn by trial and error, where they receive rewards for making the right decisions and penalties for the wrong ones.
+</p></section>
+          
+          <section><p><b>Reinforcement learning</b> is like teaching a dog new tricks with rewards and punishments. The computer learns through trial and error to maximize rewards in a given environment.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Reinforcement Learning</b> is like training a pet: you give it treats when it does something good and nothing or a gentle correction when it doesn't. With computers, it's about giving rewards (positive feedback) to encourage the actions we want it to repeat.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Low-Rank Adaptation (LoRA):</b> is a method to efficiently update large models with smaller, additional layers using parameters based on new data, without updating the pre-trained model's original parameters.
+</p></section>
+          
+          <section><p><b>Low-Rank Adaptation (LoRA)</b> is a technique used in machine learning to reduce the complexity of large language models by approximating their parameters with lower-dimensional tensors.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Low-Rank Adaptation (LoRA)</b> is like giving a very smart robot a small update so it can do a new job without having to learn everything from scratch. Imagine teaching it to make lemonade when it already knows how to make orange juice!</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Tensor</b>: another name for a matrix.
+</p><p><b>Matrix:</b> another name for a 2 dimensional array.
+</p><p><b>Array:</b> another name for a matrix.
+</p><p><b>ndarray</b>: a "n-dimensional" array.
+</p></section>
+          
+          <section><p><b>Tensor:</b> Think of a tensor as a generalization of a matrix that can have more dimensions. It's like a container that can store data of any shape and size.</p>
+<p><b>Matrix:</b> A 2-dimensional array of numbers arranged in rows and columns, often used in linear algebra for operations like addition, multiplication, and inversion.</p>
+<p><b>Array:</b> A collection of data elements stored in a linear order, typically in a single row (1-dimensional) or grid (2-dimensional).</p>
+<p><b>ndarray:</b> Short for N-dimensional array, it's a data structure that can represent arrays of any dimensionality in Python's NumPy library. It's commonly used in numerical computations for machine learning models.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Tensor</b>: Think of it as a container that can hold numbers in multiple dimensions. Like a box that can have other boxes inside, each filled with numbers. It's super useful in machine learning for organizing and processing lots of data.</p>
+
+<p><b>Matrix</b>: This is a specific type of tensor, but with only 2 dimensions. Imagine a grid or a table where you can store numbers. Like a chessboard, but instead of chess pieces, you have numbers in each square.</p>
+
+<p><b>Array</b>: This is the most basic form of storing a list of numbers in order. Think of it like a line of ducks. It can be one-dimensional like a straight line, or multi-dimensional like a grid of ducks in a park.</p>
+
+<p><b>ndarray</b>: Stands for N-dimensional array, and it's a term used especially in Python programming with libraries like NumPy. It's like the array we talked about, but specifically built to handle any number of dimensions efficiently. Imagine a line of ducks, a grid of ducks, or even a 3D cube of ducks, and so on.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>PyTorch</b> is a popular open-source machine learning library from Meta used for building deep learning models.
+</p><p><b>TensorFlow</b> is a popular open-source machine learning library from Google used for building deep learning models.
+</p><p><b>Scikit-learn</b> is a machine learning library for data mining and data analysis, built on NumPy, SciPy, and matplotlib.
+</p></section>
+          
+          <section><p><b>PyTorch:</b> A popular open-source machine learning library that provides tools for building and training neural networks.</p>
+<p><b>TensorFlow:</b> Another popular open-source machine learning library often used for building and training deep learning models.</p>
+<p><b>Scikit-learn:</b> A simple and efficient tool for data mining and data analysis, especially for building machine learning models in Python.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>PyTorch</b> is like a giant Lego set for computer programming, specifically designed for making machine learning models. Imagine you can snap together blocks of code to teach computers to recognize pictures or understand what people are saying.</p>
+
+<p><b>TensorFlow</b> is another giant Lego set, much like PyTorch, but made by Google. It's used for creating machine learning models too. Think of it as a different brand of Legos that some people prefer, depending on their project needs.</p>
+
+<p><b>Scikit-learn</b> is like a Swiss Army knife for machine learning with tools ready out of the box. It's great for beginners because it lets you handle complex tasks, like making predictions or finding patterns, with simpler, pre-built Lego blocks compared to PyTorch or TensorFlow.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Accelerator:</b> Hardware that speeds up the performance of specific tasks, "offloading" those tasks from the CPU.
+</p><p><b>GPU:</b>a Graphics Processing Unit can process complex computations in parallel, making it great for machine learning tasks.
+</p><p><b>Kernel:</b> is a function that is executed on a GPU, operating on array elements in parallel to implement highly efficient matrix operations. Written in a GPU-specific API like CUDA or OpenCL.
+</p></section>
+          
+          <section><p><b>Accelerator:</b> A type of hardware used to speed up computations in machine learning tasks.</p>
+<p><b>GPU:</b> Graphics Processing Unit, a type of accelerator commonly used in machine learning for its parallel processing capabilities.</p>
+<p><b>GPU kernel:</b> A small program executed on a GPU that performs a specific computation task in parallel.<small>gpt-3.5-turbo</small></section>
+          
+          <section><p>An <b>accelerator</b> is a piece of hardware designed specifically to do certain types of computing tasks much faster than a regular CPU (the brain of your computer). It’s like having a specialist tool or a kitchen gadget that's perfect for a specific job, like a blender for smoothies.</p>
+
+<p>A <b>GPU</b>, which stands for Graphics Processing Unit, is a type of accelerator that's really good at handling video and images, but it's also amazing for machine learning because it can do a lot of calculations at the same time. Imagine you have a huge wall to paint; a GPU would be like having a team of painters, each with their own brush, working in parallel to finish the job faster.</p>
+
+<p>A <b>GPU kernel</b> is a piece of code that runs on the GPU. Instead of having one task done at a time, this kernel allows thousands of tasks to be processed simultaneously by the GPU. It's like a conductor leading an orchestra, directing each musician (or in this case, each core of the GPU) to play their part at the exact right time to create a symphony of calculations.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Language model:</b> A system that learns the structure and patterns of language to predict and generate text.
+</p><p><b>Natural Language Processing (NLP):</b> The field of study focused on making computers understand, interpret, and generate human language.</p>
+</p></section>
+          
+          <section><p><b>Language model:</b> A language model is a statistical model that is used to predict the probability of a sequence of words in a sentence. It helps machines understand and generate human language.</p>
+
+<p><b>Natural Language Processing (NLP):</b> NLP is a branch of artificial intelligence that focuses on the interaction between computers and humans using natural language. It involves the development of algorithms to help computers understand, interpret, and generate human language.<small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Language Model</b>: Imagine your computer trying to finish your sentences while you're typing an email. A language model is a smart program that learns how to predict the next word in a sentence based on the words that came before.</p>
+
+<p><b>Natural Language Processing (NLP)</b>: This is like teaching computers to understand and speak human language. NLP helps computers read text, hear speech, interpret it, measure sentiment, and determine which parts are important.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Large language model</b>: a model understand and generate human language, trained trained on massive amounts of text data.
+</p></section>
+          
+          <section><p><b>Large Language Model:</b> A complex algorithm that uses a huge amount of data to understand and generate human language, like writing paragraphs, answering questions, or even having conversations. It learns patterns and relationships from the data to make accurate predictions.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Large language models</b> are like the smart assistants in our phones but much bigger and smarter. They read a huge amount of text from the internet and learn how to write or chat by spotting patterns in this text, kind of like how you learned to speak by listening to others.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Token:</b> A single unit of input given to a machine learning model, usually a word or a punctuation mark.
+</p><p><b>Subword encoding:</b> Breaking down words into smaller parts to help a model understand and generate words it may not have seen before.
+</p></section>
+          
+          <section><p><b>Token:</b> A token is a single unit of text, such as a word or a punctuation mark, that a machine learning model processes.</p>
+<p><b>Subword encoding:</b> Subword encoding is a technique used to break down words into smaller parts to help the model better understand and predict text, especially for languages with complex morphology.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Token</b>: Imagine breaking down sentences into smaller pieces, like words or even parts of words. In machine learning, each of these pieces is called a "token." It's like chopping up a sentence into bits that the computer can easily understand and work with.</p>
+
+<p><b>Subword Encoding</b>: Sometimes, a word can be too big or not common enough, so machines break it down into smaller, meaningful pieces. This method, called subword encoding, helps the machine to understand and generate text more effectively by working with these smaller chunks, instead of whole, uncommon words.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Prompts:</b> Words or phrases given to a machine learning model to generate specific outputs or responses.
+</p><p><b>Prompt Engineering:</b> Designing effective prompts to guide large language models in producing desired outputs.
+</p><p><b>System Prompt:</b> The initial prompt given to a language model to start generating text or completing tasks.
+</p></section>
+          
+          <section><p><b>Prompts:</b> Text inputs given to a machine learning model to receive desired outputs.</p>
+<p><b>Prompt Engineering:</b> Crafting effective prompts to guide a model towards desired tasks or outcomes.</p>
+<p><b>System Prompt:</b> The prompt used in a machine learning system to generate responses or outputs.<small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Prompts</b> are like questions or instructions you give to a machine learning model, especially language models, to get it to generate a specific kind of response. Think of it as asking your smart assistant to do something for you.</p>
+
+<p><b>Prompt engineering</b> is like becoming a whisperer for those models. It means crafting those instructions very carefully to get the best possible answers out of the machine. It's like knowing exactly how to ask a question to get the answer you want from a friend.</p>
+
+<p><b>System prompt</b> refers to the initial setup or example prompts that come with a machine learning system. It's like the default questions or commands already programmed into your smart speaker when you first plug it in.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Transformers</b> a neural network architecture that can efficiently process sequential data by learning to focus on different parts of the input.
+</p><p><b>GPT</b> Generative Pre-trained Transformer, a type of large language model that can generate human-like text based on input data it has been trained on.
+</p></section>
+          
+          <section><p><b>Transformers:</b> A type of model architecture that allows for capturing long-range dependencies in data by looking at all parts of the input sequence simultaneously.</p>
+<p><b>GPT (Generative Pre-trained Transformer):</b> A type of large language model that uses the transformer architecture to generate human-like text based on the input it receives.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Transformers</b> are like smart robots in the world of text. They're designed to understand, remember, and use the context of words. Imagine telling a story to a friend but in reverse; transformers help computers make sense of our backward story, focusing on each word and how it relates to the others.</p>
+
+<p><b>GPT (Generative Pre-trained Transformer)</b> is like a very smart parrot that has read a lot of books. You give it a piece of text, and it can continue the story for you, write a poem, or even answer questions, mimicking human-like responses based on what it has learned from reading all those books.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Attention mechanism</b> allows the model to dynamically focus on different parts of the input, used to understand the context and relationships between words in a sentence.
+</p></section>
+          
+          <section><p><b>Attention mechanism</b> is a way for models to focus on specific parts of input when making predictions. It's like shining a spotlight on the most important information.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>In the world of machine learning, think of the <b>attention mechanism</b> like when you're trying to focus on someone talking in a noisy room. Your brain tunes out the background noise and pays "attention" to what's important - the speaker. Similarly, this mechanism helps models focus on specific parts of the input data that are more relevant to solving the task at hand, improving their ability to make accurate predictions or understand language.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Retrieval Augmented Generation (RAG)</b> enables large language models to access (retrieve) information from external knowledge sources to improve the quality and relevance of generated text.
+</p></section>
+          
+          <section><p><b>Retrieval augmented generation (RAG):</b> It's a technique that combines information retrieval and text generation in large language models to improve the quality of generated content by incorporating relevant external knowledge from a large corpus of text.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Retrieval Augmented Generation (RAG)</b> is like when you're writing an essay and you use Google to find information to help you write better. It's a method where a machine learning model does something similar, it searches a large database to find helpful information before generating a response.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Embeddings:</b> representations of words or entities as numerical vectors in a multi-dimensional space, capturing their semantic meanings and relationships. Similar entities will be represented by similar vectors.
+</p><p><b>Vector Database:</b> Stores large collections of vectors representing data points, enabling quick similarity searches and clustering based on vector similarities.
+</p></section>
+          
+          <section><p><b>Embeddings:</b> Representations of words or other items as vectors in a multi-dimensional space to capture relationships and similarities between them.</p>
+
+<p><b>Vector Database:</b> A collection of vectors that can be queried to find similar vectors based on a specified similarity measure, often used in applications such as recommendation systems or search engines. </p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p><b>Embeddings</b> are like translating words, sentences, or even pictures into a secret mathematical language. Imagine turning a fruit like an apple into a list of numbers that captures everything about it - its color, taste, and texture. That's what embeddings do with information, turning it into numbers that computers can understand and work with.</p>
+
+<p><b>Vector database</b> is like a magical library where instead of books, each shelf has vectors - those lists of numbers I mentioned before, like the ones for our apple. Just like how you'd go to the library to find a book, in a vector database, you can quickly find the list of numbers (or vectors) you're looking for, which helps in tasks like finding information or making recommendations.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+        <section>
+          
+          <section>Deep Breath</section>
+          
+        </section>
+        
+        <section>
+          
+          <section><p></p><p><b>Rabbit hole:</b> A term used in computing jargon to refer to a situation where a person gets distracted or goes off on a tangent while working on a task or a problem.
+</p></section>
+          
+          <section><p><b>Rabbit hole</b>: This is a term used to describe the phenomenon of getting lost and immersed in a complex or confusing situation, like delving deep into a topic without realizing how deep you've gone.</p><small>gpt-3.5-turbo</small></section>
+          
+          <section><p>When we talk about a <b>rabbit hole</b>, we're not discussing wildlife. In Machine Learning and in many discussions, it means going into a topic deeply and often side-tracking into many detailed areas, much like following a complex, twisty underground tunnel system where a rabbit might live. It's getting deeply involved in something that is complicated and often time-consuming.</p><small>gpt-4-turbo-preview</small></section>
+          
+        </section>
+        
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
