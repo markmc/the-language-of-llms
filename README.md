@@ -1,5 +1,7 @@
 # The Language of Large Language Models
 
+https://markmc.github.io/the-language-of-llms/
+
 One of the challenging things aspects of learning about Machine Learning. And some
 of the terminology seems unnecessarily obscure - e.g. the act of asking a model
 to produce a prediction can be called "forward pass", "inference", etc.
