@@ -16,8 +16,13 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        {% for slide_content in slides %}
-        <section>{{ slide_content }}</section>
+        <section><h1>The Language of Large Language Models</h1>Mark McLoughlin, March 2024</br>https://github.com/markmc/the-language-of-llms</section>
+        {% for section_slides in sections %}
+        <section>
+          {% for slide_content in section_slides %}
+          <section>{{ slide_content }}</section>
+          {% endfor %}
+        </section>
         {% endfor %}
       </div>
     </div>

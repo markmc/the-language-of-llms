@@ -2,10 +2,11 @@ import dotenv
 import jinja2
 import openai
 import sys
+import html
 
 
 API_KEY_ENV_FILE=".api_key.env"
-MODEL="gpt-3.5-turbo"
+MODELS=["gpt-3.5-turbo", "gpt-4-turbo-preview"]
 
 SYSTEM_PROMPT="""
   You are a friendly Computer Science university lecturer who enjoys taking difficult concepts
@@ -22,33 +23,41 @@ SYSTEM_PROMPT="""
   You will be provided a term or list of terms, and you will provide that simple explanation in
   return.
 
-  Use a new HTML paragraph for each concept. Empasize term in question using HTML bold.
+  Use a new HTML <p> tag for each concept. Empasize term in question using HTML <b> tags.
 """
 SYSTEM_PROMPT = SYSTEM_PROMPT.strip(' \n').replace('\n', '').replace('  ', ' ')
 
 with open('terms.txt', 'r') as f:
     terms = f.readlines()
 
-
 dotenv.load_dotenv(API_KEY_ENV_FILE)
 client = openai.OpenAI()
 
+sections = []
 
-slides = []
+sections.append([f"<small>{html.escape(SYSTEM_PROMPT)}</small>"])
+
 for term in terms:
-    completion = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": term},
-        ]
-    )
-    content = completion.choices[0].message.content
-    slides.append(content)
-    sys.stderr.write(f"Term: {term}\nContent: {content}\n\n")
+    if not term.strip():
+        slides.append("Deep Breath")
+        continue
 
+    slides = []
+    for model in MODELS:
+        completion = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": term},
+            ]
+        )
+        content = completion.choices[0].message.content
+        slides.append(content)
+        sys.stderr.write(f"Term: {term}\nContent: {content}\n\n")
+
+    sections.append(slides)
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
 template = env.get_template('index.html.jinja')
 
-sys.stdout.write(template.render(slides=slides))
+sys.stdout.write(template.render(sections=sections))
