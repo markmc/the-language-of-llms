@@ -1,3 +1,4 @@
 python-dotenv
 openai
 jinja2
+PyYaml

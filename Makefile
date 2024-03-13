@@ -1,5 +1,5 @@
 
-reveal.js-master/index.html: reveal.js-master index.html.jinja generate.py terms.txt
+reveal.js-master/index.html: reveal.js-master index.html.jinja generate.py terms.txt mydefs.yaml
 	python generate.py > reveal.js-master/index.html
 
 reveal.js-master: reveal.js-master.zip

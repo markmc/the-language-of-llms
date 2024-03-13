@@ -41,10 +41,8 @@ language model, natural language processing (NLP)
 large language model
 token, subword encoding
 prompts, prompt engineering, system prompt
-zero-shot, one-shot, few-shot
 transformers, GPT
 attention mechanism
-one-hot encoding
 retrieval augmented generation (RAG)
 embeddings, vector database
 

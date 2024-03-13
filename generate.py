@@ -3,10 +3,11 @@ import jinja2
 import openai
 import sys
 import html
+import yaml
 
 
 API_KEY_ENV_FILE=".api_key.env"
-MODELS=["gpt-3.5-turbo", "gpt-4-turbo-preview"]
+MODELS=["mydefs", "gpt-3.5-turbo", "gpt-4-turbo-preview"]
 
 SYSTEM_PROMPT="""
   You are a friendly Computer Science university lecturer who enjoys taking difficult concepts
@@ -30,6 +31,9 @@ SYSTEM_PROMPT = SYSTEM_PROMPT.strip(' \n').replace('\n', '').replace('  ', ' ')
 with open('terms.txt', 'r') as f:
     terms = f.readlines()
 
+with open('mydefs.yaml', 'r') as f:
+    mydefs = yaml.safe_load(f).get('terms', {})
+
 dotenv.load_dotenv(API_KEY_ENV_FILE)
 client = openai.OpenAI()
 
@@ -38,22 +42,34 @@ sections = []
 sections.append([f"<small>{html.escape(SYSTEM_PROMPT)}</small>"])
 
 for term in terms:
-    if not term.strip():
-        slides.append("Deep Breath")
+    term = term.strip()
+    if not term:
+        sections.append(["Deep Breath"])
         continue
 
     slides = []
     for model in MODELS:
-        completion = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": term},
-            ]
-        )
-        content = completion.choices[0].message.content
-        slides.append(content)
-        sys.stderr.write(f"Term: {term}\nContent: {content}\n\n")
+        if model == "mydefs":
+            slide_content = "<p>"
+            for t in [t.strip() for t in term.split(',')]:
+                if not t in mydefs:
+                    sys.stderr.write(f"{t} not found\n")
+                slide_content += f"</p><p>{mydefs.get(t, {}).get('explanation')}"
+            slide_content += "</p>"
+            slides.append(slide_content)
+        else:
+            completion = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": term},
+                ]
+            )
+            content = completion.choices[0].message.content
+            content += f"<small>{model}</small>"
+
+            slides.append(content)
+            sys.stderr.write(f"Term: {term}\nContent: {content}\n\n")
 
     sections.append(slides)
 

@@ -1,0 +1,178 @@
+terms:
+  accelerator:
+    explanation: >
+      <b>Accelerator:</b> Hardware that speeds up the performance of specific tasks, "offloading" those tasks from the CPU.
+  alignment:
+    explanation: >
+      <b>Alignment:</b> Ensuring that a model's understanding aligns with human values and intentions, making it safe and beneficial for us.
+  array:
+    explanation: >
+      <b>Array:</b> another name for a matrix.
+  attention mechanism:
+    explanation: >
+      <b>Attention mechanism</b> allows the model to dynamically focus on different parts of the input, used to understand the context and relationships between words in a sentence.
+  backward pass:
+    explanation: >
+      <b>Backward pass:</b> is when a model calculates how to update its parameters during training in order to reduce the loss function, thereby improving its predictions.
+  biases:
+    explanation: >
+      <b>Biases</b> are additional parameters in a model that allow for shifts in the predictions to better fit the data - e.g. the y-intercept in a linear model.
+  coefficient:
+    explanation: >
+      <b>Coefficient:</b> a number that represents the relationship between variables - in <tt>y = mx + c</tt>, the slope <tt>m</tt> is the coefficient applied to the input.
+  deep learning:
+    explanation: >
+      <b>Deep learning</b> uses neural networks with many layers to learn and make decisions from large amounts of data. The more layers a network has, the more complex patterns it can learn.
+  dependent variable:
+    explanation: >
+      <b>Dependent variable:</b> a variable that changes in response to an independent variable - in <tt>y = mx + c</tt> the dependent variable is <tt>y</tt>.
+  embeddings:
+    explanation: >
+      <b>Embeddings:</b> representations of words or entities as numerical vectors in a multi-dimensional space, capturing their semantic meanings and relationships. Similar entities will be represented by similar vectors.
+  epoch:
+    explanation: >
+      <b>Epoch</b> is one complete pass through the entire dataset during training.
+  fine-tuning:
+    explanation: >
+      <b>Fine-tuning:</b> further training of a pre-trained model so it can perform a specific task really well.
+  fit:
+    explanation: >
+      <b>Fit</b>: training a model on a dataset so its predictions closely match the data - "fitting a model to the data".
+  forward pass:
+    explanation: >
+      <b>Forward pass</b> is when input data is passed through a neural network from input to output to make a prediction.
+  GPT:
+    explanation: >
+      <b>GPT</b> Generative Pre-trained Transformer, a type of large language model that can generate human-like text based on input data it has been trained on.
+  GPU:
+    explanation: >
+      <b>GPU:</b>a Graphics Processing Unit can process complex computations in parallel, making it great for machine learning tasks.
+  GPU kernel:
+    explanation: >
+      <b>Kernel:</b> is a function that is executed on a GPU, operating on array elements in parallel to implement highly efficient matrix operations. Written in a GPU-specific API like CUDA or OpenCL.
+  hidden layer:
+    explanation: >
+      <b>Hidden layer</b>: A middle layer in a neural network where data is processed using a series of mathematical operations. Takes input from an input layer or another hidden layer, and passes its output to another hidden layer or an output layer.
+  independent variable:
+    explanation: >
+      <b>Independent variable:</b> an input variable that affects an output - in <tt>y = mx + c</tt> the independent variable is <tt>x</tt>
+  inference:
+    explanation: >
+      <b>Inference</b>: Using a trained model to make a prediction or decision based on input data.
+  intercept:
+    explanation: >
+      <b>Intercept:</b> the starting point, independent of the input - in <tt>y = mx + c</tt>, it is <tt>c</tt> where the line intersects the y-axis.
+  label:
+    explanation: >
+      <b>Label</b>: A piece of information that identifies or categorizes data. In machine learning, labels are used to train models to make predictions or classifications based on input data.
+  language model:
+    explanation: >
+      <b>Language model:</b> A system that learns the structure and patterns of language to predict and generate text.
+  large language model:
+    explanation: >
+      <b>Large language model</b>: a model understand and generate human language, trained trained on massive amounts of text data.
+  layers:
+    explanation: >
+      <b>Layers:</b> In a neural network, nodes are organized into layers. Each layer processes and transforms the input data before passing it to the next layer.
+  linear model:
+    explanation: >
+      <b>Linear model</b>: A simple mathematical model of a straight line relationship between an input and an output. Recall <tt>y = mx + c</tt> from analytic geometry.
+  loss function:
+    explanation: >
+      <b>Loss function</b>: A measure of how well a model is performing, by calculating the difference between predicted values and actual values.
+  Low-Rank Adaptation (LoRA):
+    explanation: >
+      <b>Low-Rank Adaptation (LoRA):</b> is a method to efficiently update large models with smaller, additional layers using parameters based on new data, without updating the pre-trained model's original parameters.
+  machine learning:
+    explanation: >
+      <b>Machine learning</b> refers to algorithms and processes that allow machines to learn from data without being explicitly programmed.
+  matrix:
+    explanation: >
+      <b>Matrix:</b> another name for a 2 dimensional array.
+  model:
+    explanation: >
+      <b>Model:</b> A simplified representation of a real-world process or system that can be used to make predictions or decisions.
+  model architecture:
+    explanation: >
+      <b>Model architecture</b> refers to the structure of a machine learning model - the specific chain of computations applied to input to produce an output prediction.
+  natural language processing (NLP):
+    explanation: >
+      <b>Natural Language Processing (NLP):</b> The field of study focused on making computers understand, interpret, and generate human language.</p>
+  ndarray:
+    explanation: >
+      <b>ndarray</b>: a "n-dimensional" array.
+  neural network:
+    explanation: >
+      <b>Neural network:</b> a model architecture made up of interconnected nodes that process information, inspired by the brain's structure of neurons and synapses.
+  overfitting:
+    explanation: >
+      <b>Overfitting</b> is when a model learns the details and noise in the training data so well that it performs poorly on new data. It's like memorizing answers rather than learning general concepts.
+  parameters:
+    explanation: >
+      <b>Parameters</b> are the tunable parts of a model's computations - an algorithm is used to adjust these tunables during training to improve the model's predictions.
+  pre-trained model:
+    explanation: >
+      <b>Pre-trained model</b>: a model that has already been trained on a large amount of data, allowing it to make predictions without needing to start from scratch.
+  prompt engineering:
+    explanation: >
+      <b>Prompt Engineering:</b> Designing effective prompts to guide large language models in producing desired outputs.
+  prompts:
+    explanation: >
+      <b>Prompts:</b> Words or phrases given to a machine learning model to generate specific outputs or responses.
+  PyTorch:
+    explanation: >
+      <b>PyTorch</b> is a popular open-source machine learning library from Meta used for building deep learning models.
+  rabbit hole:
+    explanation: >
+      <b>Rabbit hole:</b> A term used in computing jargon to refer to a situation where a person gets distracted or goes off on a tangent while working on a task or a problem.
+  regression:
+    explanation: >
+      <b>Regression:</b> expressing the relationship between variables as a continuous function in order to make predictions.
+  reinforcement learning:
+    explanation: >
+      <b>Reinforcement learning:</b> teaching machines to learn by trial and error, where they receive rewards for making the right decisions and penalties for the wrong ones.
+  retrieval augmented generation (RAG):
+    explanation: >
+      <b>Retrieval Augmented Generation (RAG)</b> enables large language models to access (retrieve) information from external knowledge sources to improve the quality and relevance of generated text.
+  Scikit-learn:
+    explanation: >
+      <b>Scikit-learn</b> is a machine learning library for data mining and data analysis, built on NumPy, SciPy, and matplotlib.
+  stochastic gradient descent:
+    explanation: >
+      <b>Stochastic Gradient Descent:</b> updating each model parameter semi-randomly (stochastically) based on an indication (gradient) of the update required to minimize the loss function.
+  subword encoding:
+    explanation: >
+      <b>Subword encoding:</b> Breaking down words into smaller parts to help a model understand and generate words it may not have seen before.
+  supervised learning:
+    explanation: >
+      <b>Supervised learning</b> is when we train a model with input data and the correct output data, so it can learn to make predictions or decisions.
+  system prompt:
+    explanation: >
+      <b>System Prompt:</b> The initial prompt given to a language model to start generating text or completing tasks.
+  tensor:
+    explanation: >
+      <b>Tensor</b>: another name for a matrix.
+  TensorFlow:
+    explanation: >
+      <b>TensorFlow</b> is a popular open-source machine learning library from Google used for building deep learning models.
+  token:
+    explanation: >
+      <b>Token:</b> A single unit of input given to a machine learning model, usually a word or a punctuation mark.
+  training:
+    explanation: >
+      <b>Training</b> is a process of learning from examples whereby a model is iteratively adjusted as it learns patterns from data and can make better predictions.</p>
+  training data:
+    explanation: >
+      <b>Training data</b> is a dataset we use for training a model, in contrast to datasets we later use to test a model.
+  transformers:
+    explanation: >
+      <b>Transformers</b> a neural network architecture that can efficiently process sequential data by learning to focus on different parts of the input.
+  validation data:
+    explanation: >
+      <b>Validation data:</b> A separate set of data used to assess how well a model generalizes to new, unseen data.
+  vector database:
+    explanation: >
+      <b>Vector Database:</b> Stores large collections of vectors representing data points, enabling quick similarity searches and clustering based on vector similarities.
+  weights:
+    explanation: >
+      <b>Weights</b> are another name for of model parameters that are applied to the input - i.e. coefficients.
